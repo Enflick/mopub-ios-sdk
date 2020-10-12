@@ -14,7 +14,7 @@
 @protocol MPNativeAdAdapter;
 @protocol MPNativeAdRenderer;
 @class MPAdConfiguration;
-
+@class MPNativeView; // TextNow - for below property
 /**
  * The `MPNativeAd` class is used to render and manage events for a native advertisement. The
  * class provides methods for accessing native ad properties returned by the server, as well as
@@ -22,6 +22,11 @@
  */
 
 @interface MPNativeAd : NSObject <MPMoPubAd>
+
+// TextNow - moved from .m
+@property (nonatomic, readwrite, strong) MPAdConfiguration *configuration;
+@property (nonatomic, readwrite, strong) NSString *adUnitID;
+@property (nonatomic) MPNativeView *associatedView;
 
 /** @name Ad Resources */
 
