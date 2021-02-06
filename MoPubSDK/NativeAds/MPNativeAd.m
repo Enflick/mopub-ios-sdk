@@ -32,8 +32,10 @@
 @interface MPNativeAd () <MPNativeAdAdapterDelegate, MPNativeViewDelegate>
 
 @property (nonatomic, readwrite, strong) id<MPNativeAdRenderer> renderer;
-@property (nonatomic, readwrite, strong) MPAdConfiguration *configuration;
-@property (nonatomic, readwrite, strong) NSString *adUnitID;
+
+// TextNow: Moved to .h
+// @property (nonatomic, readwrite, strong) MPAdConfiguration *configuration;
+// @property (nonatomic, readwrite, strong) NSString *adUnitID;
 
 @property (nonatomic, strong) NSDate *creationDate;
 
@@ -45,7 +47,9 @@
 @property (nonatomic, assign) BOOL hasTrackedClick;
 
 @property (nonatomic, copy) NSString *adIdentifier;
-@property (nonatomic) MPNativeView *associatedView;
+
+// TextNow: Moved to .h
+// @property (nonatomic) MPNativeView *associatedView;
 
 @property (nonatomic) BOOL hasAttachedToView;
 
